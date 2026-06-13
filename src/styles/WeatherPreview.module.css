@@ -1,0 +1,193 @@
+.container {
+  padding: 1rem 1.25rem;
+}
+
+.heading {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-400);
+  margin-bottom: 0.875rem;
+}
+
+/* Hourly strip */
+.hourlyStrip {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 0.25rem;
+}
+
+.hourlyStrip::-webkit-scrollbar { display: none; }
+
+.hourSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  padding: 0 0.25rem;
+}
+
+.hourSlot.isEvent {
+  background: var(--gray-50);
+  border-radius: var(--radius);
+}
+
+.hourTime {
+  font-size: 0.6875rem;
+  color: var(--gray-400);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hourIcon {
+  color: var(--gray-600);
+}
+
+.hourTemp {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.precipBar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.precipPct {
+  font-size: 0.625rem;
+  color: var(--gray-400);
+}
+
+/* Daily view */
+.dailyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.5rem;
+}
+
+.dayCard {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 0.625rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dayCard.isEvent {
+  border-color: var(--black);
+  background: var(--gray-50);
+}
+
+.dayName {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.dayPeriod {
+  font-size: 0.625rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dayIcon {
+  color: var(--gray-600);
+  margin: 2px 0;
+}
+
+.dayTemp {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.dayPrecip {
+  font-size: 0.6875rem;
+  color: var(--gray-400);
+}
+
+.dayForecast {
+  font-size: 0.625rem;
+  color: var(--gray-400);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* SVG chart */
+.svgChart {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.noWeather {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.fetchingBox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  padding: 0.5rem 0;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--gray-200);
+  border-top-color: var(--gray-500);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorMsg {
+  font-size: 0.8125rem;
+  color: #c00;
+  padding: 0.25rem 0;
+}
+
+.summaryRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+.summaryIcon {
+  color: var(--gray-700);
+}
+
+.summaryTemp {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.summaryForecast {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+.summaryMeta {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  margin-top: 0.125rem;
+}
