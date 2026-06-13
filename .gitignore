@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+
+# Database
+database/data.sqlite
+database/data.sqlite-wal
+database/data.sqlite-shm
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
+# OS
+.DS_Store
